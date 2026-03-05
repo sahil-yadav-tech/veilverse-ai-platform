@@ -1,8 +1,16 @@
+import { BrowserRouter } from 'react-router-dom';
+import { ReduxProvider } from './app/providers/ReduxProvider';
+import AppRoutes from './app/routes/AppRoutes';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <ReduxProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ReduxProvider>
+  );
 }
 
-export default App
+export default App;
