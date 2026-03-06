@@ -1,6 +1,11 @@
 import axios from 'axios';
 import { env } from '../config/env';
 
+
+import { API_ENDPOINTS } from './apiEndpoints';
+
+export { API_ENDPOINTS };
+
 const axiosInstance = axios.create({
   baseURL: env.API_BASE_URL,
   timeout: 10000,

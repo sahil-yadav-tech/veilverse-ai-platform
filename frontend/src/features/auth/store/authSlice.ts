@@ -1,6 +1,19 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { AuthState, User, LoginCredentials, RegisterCredentials, AuthResponse } from '../../../types/auth.types';
+
+
+
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+
 import authService from '../services/authService';
+
+import type {
+  AuthState,
+  LoginCredentials,
+  RegisterCredentials,
+  AuthResponse,
+  User
+} from "../auth.types";
+
 
 const initialState: AuthState = {
   user: null,
@@ -80,7 +93,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload as string;
       })
-      
+
       // Register cases
       .addCase(register.pending, (state) => {
         state.isLoading = true;
@@ -100,7 +113,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload as string;
       })
-      
+
       // Logout case
       .addCase(logout.fulfilled, (state) => {
         state.user = null;
@@ -109,7 +122,7 @@ const authSlice = createSlice({
         localStorage.removeItem('token');
         localStorage.removeItem('refreshToken');
       })
-      
+
       // Get current user cases
       .addCase(getCurrentUser.pending, (state) => {
         state.isLoading = true;

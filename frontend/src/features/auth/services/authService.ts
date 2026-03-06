@@ -1,6 +1,7 @@
+// features/auth/services/authService.ts
 import axiosInstance from '../../../core/api/axiosInstance';
-import { API_ENDPOINTS } from '../../../core/api/apiEndpoints';
-import { LoginCredentials, RegisterCredentials, AuthResponse, User } from '../../../types/auth.types';
+import { API_ENDPOINTS } from '../../../core/api/axiosInstance';
+import type { LoginCredentials, RegisterCredentials, AuthResponse, User } from '../auth.types';
 
 class AuthService {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {

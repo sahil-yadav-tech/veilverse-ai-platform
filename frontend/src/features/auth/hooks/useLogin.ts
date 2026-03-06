@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
-import { LoginCredentials } from '../../../types/auth.types';
+import type { LoginCredentials } from '../auth.types';
 
 export const useLogin = () => {
   const [formData, setFormData] = useState<LoginCredentials>({

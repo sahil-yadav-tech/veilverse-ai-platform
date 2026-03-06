@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useLogin } from '../hooks/useLogin';
 import Input from '../../../shared/components/Input/Input';
 import Button from '../../../shared/components/Button/Button';
-// ';
 
 
 const LoginPage: React.FC = () => {
