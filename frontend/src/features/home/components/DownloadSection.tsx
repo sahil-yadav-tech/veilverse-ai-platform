@@ -1,11 +1,11 @@
 // DownloadSection.tsx
-import { Apple, Chrome, Smartphone } from 'lucide-react';
+import { Apple, Smartphone } from 'lucide-react';
 
 const DownloadSection = () => {
   return (
     <section className="w-full py-20 px-6 relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500"></div>
       
       {/* Animated Circles */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -21,7 +21,7 @@ const DownloadSection = () => {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <button className="group flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-xl">
-            <Apple size={24} className="group-hover:rotate-12 transition-transform" />
+            <Apple size={24} className="group-hover:rotate-12 transition-transform text-pink-500" />
             <div className="text-left">
               <div className="text-xs">Download on the</div>
               <div className="text-lg">App Store</div>

@@ -27,17 +27,17 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-6 bg-gradient-to-b from-purple-50 to-white">
+    <section className="w-full py-20 px-6 bg-gradient-to-b from-pink-50 to-white">
       <div className="max-w-6xl mx-auto">
         
         <div className="text-center mb-16">
-          <h2 className="text-sm uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 mb-4">
+          <h2 className="text-sm uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500 mb-4">
             TESTIMONIALS
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Loved by users
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500">
               worldwide
             </span>
           </h3>
@@ -50,9 +50,9 @@ const Testimonials = () => {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 p-[2px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 p-[2px]">
                   <div className="w-full h-full rounded-full bg-white p-[2px]">
-                    <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-100 to-pink-100"></div>
+                    <div className="w-full h-full rounded-full bg-gradient-to-r from-pink-100 to-rose-100"></div>
                   </div>
                 </div>
                 <div>
