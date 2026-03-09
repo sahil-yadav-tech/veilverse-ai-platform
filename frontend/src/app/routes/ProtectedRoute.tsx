@@ -7,7 +7,7 @@ const ProtectedRoute: React.FC = () => {
   const { isAuthenticated, isLoading } = useAuth();
 
   if (isLoading) {
-    return <Loader fullScreen />;
+    return <Loader  />;
   }
 
   return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;

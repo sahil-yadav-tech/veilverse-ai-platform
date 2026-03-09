@@ -1,27 +1,27 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import ProtectedRoute from './ProtectedRoute';
-import LoginPage from '../../features/auth/pages/LoginPage';
-import RegisterPage from '../../features/auth/pages/RegisterPage';
-import HomePage from '../../features/home/pages/HomePage';
-// import DashboardPage from '../../features/dashboard/pages/DashboardPage';
+import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
+import MainLayout from "../../shared/layouts/MainLayout";
 
-const AppRoutes: React.FC = () => {
+import { homeRoutes } from "../../features/home/routes/homeroutes";
+import { productRoutes } from "../../features/products/routes/product.routes";
+
+const AppRoutes = () => {
   return (
     <Routes>
-      {/* Public routes */}
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      
-      {/* Protected routes */}
-      <Route element={<ProtectedRoute />}>
-        {/* <Route path="/dashboard" element={<DashboardPage />} /> */}
-        {/* Add other protected routes here */}
+
+      {/* Public Layout */}
+      <Route element={<MainLayout />}>
+        {homeRoutes}
+        {productRoutes}
       </Route>
-      
-      {/* Redirect root to dashboard or login */}
-      {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */} //!--------------------------
+
+      {/* Protected Layout */}
+      <Route element={<ProtectedRoute />}>
+        <Route element={<MainLayout />}>
+          {/* protected pages */}
+        </Route>
+      </Route>
+
     </Routes>
   );
 };
