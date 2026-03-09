@@ -4,6 +4,8 @@ import MainLayout from "../../shared/layouts/MainLayout";
 
 import { homeRoutes } from "../../features/home/routes/homeroutes";
 import { productRoutes } from "../../features/products/routes/product.routes";
+import NotFoundPage from "../../shared/components/NotFoundPage/NotFoundPage";
+import { exploreRoutes } from "../../features/explore/routes/exploreroutes";
 
 const AppRoutes = () => {
   return (
@@ -12,13 +14,20 @@ const AppRoutes = () => {
       {/* Public Layout */}
       <Route element={<MainLayout />}>
         {homeRoutes}
+        {exploreRoutes}
         {productRoutes}
+
+        //TODO:- NOT FOUND 
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
 
       {/* Protected Layout */}
       <Route element={<ProtectedRoute />}>
         <Route element={<MainLayout />}>
           {/* protected pages */}
+
+        <Route path="*" element={<NotFoundPage />} />
+
         </Route>
       </Route>
 

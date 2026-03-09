@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 const HeroSection = () => {
+
+  const navigate = useNavigate()
+
+  // Redirecting to Explore Page 
+  const handleRedirectExplore = () => {
+    navigate(`/explore`)
+  }
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-yellow-50 px-6">
       <div className="text-center max-w-4xl animate-fade-in">
@@ -21,7 +30,7 @@ const HeroSection = () => {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="relative group px-8 py-4 rounded-full text-white text-lg font-semibold overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+          <button className="relative group px-8 py-4 rounded-full text-white text-lg font-semibold overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" onClick={handleRedirectExplore}>
             <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500 group-hover:scale-105 transition-transform duration-300"></div>
             <span className="relative">Get Started — It's Free</span>
           </button>
