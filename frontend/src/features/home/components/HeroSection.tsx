@@ -1,16 +1,16 @@
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center  via-white to-blue-50 px-6">
+    <section className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-yellow-50 px-6">
       <div className="text-center max-w-4xl animate-fade-in">
         
-        <h2 className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 mb-4 font-medium">
+        <h2 className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 mb-4 font-medium">
           ✦ Veilverse ✦
         </h2>
 
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
           Match, Connect & Talk
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500">
             Audio, Video & Voice Calls
           </span>
         </h1>
@@ -22,13 +22,13 @@ const HeroSection = () => {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button className="relative group px-8 py-4 rounded-full text-white text-lg font-semibold overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 group-hover:scale-105 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500 group-hover:scale-105 transition-transform duration-300"></div>
             <span className="relative">Get Started — It's Free</span>
           </button>
 
-          <button className="relative group px-8 py-4 rounded-full text-gray-700 text-lg font-semibold overflow-hidden border-2 border-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-border">
+          <button className="relative group px-8 py-4 rounded-full text-gray-700 text-lg font-semibold overflow-hidden border-2 border-transparent bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500 bg-clip-border">
             <div className="absolute inset-0 bg-white group-hover:bg-gray-50 transition-colors duration-300 rounded-full m-[2px]"></div>
-            <span className="relative bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="relative bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500 bg-clip-text text-transparent">
               Download — Mobile App
             </span>
           </button>
