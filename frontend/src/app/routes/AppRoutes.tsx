@@ -6,6 +6,7 @@ import { homeRoutes } from "../../features/home/routes/homeroutes";
 import { productRoutes } from "../../features/products/routes/product.routes";
 import NotFoundPage from "../../shared/components/NotFoundPage/NotFoundPage";
 import { exploreRoutes } from "../../features/explore/routes/exploreroutes";
+import { chatRoutes } from "../../features/chat/routes/chat.routes";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
         {homeRoutes}
         {exploreRoutes}
         {productRoutes}
+        {chatRoutes}
 
         //TODO:- NOT FOUND 
         <Route path="*" element={<NotFoundPage />} />
