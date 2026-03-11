@@ -26,7 +26,7 @@ const AppRoutes = () => {
       {/* Protected Layout */}
       <Route element={<ProtectedRoute />}>
         <Route element={<MainLayout />}>
-          {/* protected pages */}
+          {/* protected pages x*/}
 
         <Route path="*" element={<NotFoundPage />} />
 
