@@ -6,7 +6,9 @@ function App() {
   return (
     <ReduxProvider>
       <BrowserRouter>
+        {/* <AppRoutes /> */}
         <AppRoutes />
+
       </BrowserRouter>
     </ReduxProvider>
   );
