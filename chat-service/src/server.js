@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import app from "./app.js";
 import { initSocket } from "./socket/socketServer.js";
 import { connectDB } from "./config/db.js";
+import dns from "dns";
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 dotenv.config();
 
