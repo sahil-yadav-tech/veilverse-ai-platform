@@ -1,51 +1,49 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <nav className="w-full bg-white border-b border-gray-200 border-2 ">
-      <div className=" px-6 h-16 flex items-center justify-between px-6 h-16 flex items-center justify-between max-w-7xl mx-auto">
+    <nav className="w-full bg-white border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        {/* Left Logo */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <span className="text-3xl text-[#fe5f40]">✦</span>
-          <span className="text-lg font-semibold">VeilVesrse</span>
+          <Link to="/" className="text-lg font-semibold text-black">
+            VeilVerse
+          </Link>
         </div>
 
-        {/* Center Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-700">
+        {/* Menu */}
+        <div className="hidden md:flex items-center gap-8 text-sm text-black">
 
-          <div className="flex items-center gap-1 cursor-pointer hover:text-black">
+          <Link to="/explore" className="hover:underline">
             Explore
-            <ChevronDown size={16} />
-          </div>
+          </Link>
 
-          <div className="flex items-center gap-1 cursor-pointer hover:text-black">
+          <Link to="/solutions" className="flex items-center gap-1 hover:underline">
             Solutions
             <ChevronDown size={16} />
-          </div>
+          </Link>
 
-          <div className="cursor-pointer hover:text-black">
+          <Link to="/faq" className="hover:underline">
             FAQ
-          </div>
+          </Link>
 
-          <div className="cursor-pointer hover:text-black">
+          <Link to="/support" className="hover:underline">
             Support
-          </div>
+          </Link>
 
         </div>
 
         {/* Right Side */}
         <div className="flex items-center gap-6">
-
-          {/* <span className="text-sm cursor-pointer hover:text-black">
-            signIn
-          </span> */}
-
-          <button className="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-900 transition">
-             signIn
-          </button>
-
+          <Link to="/login">
+            <button className="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
+              Sign In
+            </button>
+          </Link>
         </div>
 
       </div>

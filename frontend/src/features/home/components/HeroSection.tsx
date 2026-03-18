@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { socket } from "../../../core/socket/socket";
 
 const HeroSection = () => {
 
@@ -10,9 +9,7 @@ const HeroSection = () => {
   const handleRedirectExplore = () => {
     navigate(`/explore`)
   }
-  const handleEmitMessge = () => {
-    socket.emit("handle_message", "Your are going very well i am appreciate")
-  }
+
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-rose-50 to-yellow-50 px-6">
       <div className="text-center max-w-4xl animate-fade-in">
@@ -27,8 +24,6 @@ const HeroSection = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-400 to-yellow-500">
             Audio, Video & Voice Calls
           </span>
-          <br />
-          <button onClick={handleEmitMessge}>Emit New Message</button>
         </h1>
 
         <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
