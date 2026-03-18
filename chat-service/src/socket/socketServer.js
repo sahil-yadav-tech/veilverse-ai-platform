@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-import { handleSocketConnection } from "./socketHandler.js";
+import { handleSendMessage, handleSocketConnection } from "./socketHandler.js";
 import { SOCKET_EVENTS } from "./events.js";
 
 export const initSocket = (server) => {
@@ -12,6 +12,7 @@ export const initSocket = (server) => {
 
   io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
     handleSocketConnection(io, socket);
+    handleSendMessage(io, socket)
   });
 
 };

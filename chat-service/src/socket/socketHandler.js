@@ -18,3 +18,10 @@ export const handleSocketConnection = (io, socket) => {
   });
 
 };
+
+
+export const handleSendMessage = (io, socket) =>{
+  socket.on(SOCKET_EVENTS.HANDLEMESSAGE, async(data) => {
+    console.log("Message from frontend", data );
+  })
+}
