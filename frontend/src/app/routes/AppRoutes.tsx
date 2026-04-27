@@ -11,15 +11,13 @@ import { chatRoutes } from "../../features/chat/routes/chat.routes";
 const AppRoutes = () => {
   return (
     <Routes>
-
       {/* Public Layout */}
       <Route element={<MainLayout />}>
         {homeRoutes}
         {exploreRoutes}
         {productRoutes}
         {chatRoutes}
-
-        //TODO:- NOT FOUND 
+        //TODO:- NOT FOUND
         <Route path="*" element={<NotFoundPage />} />
       </Route>
 
@@ -28,11 +26,9 @@ const AppRoutes = () => {
         <Route element={<MainLayout />}>
           {/* protected pages x*/}
 
-        <Route path="*" element={<NotFoundPage />} />
-
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Route>
-
     </Routes>
   );
 };
